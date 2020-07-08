@@ -17,7 +17,8 @@
 
 
 	$recipe1->setYield("6 Servings");
-	echo $recipe1;
+	// echo $recipe1;
+	echo new Render;
 	// echo Render::displayRecipe($recipe1);
 
 ?>
