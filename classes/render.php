@@ -1,5 +1,5 @@
 <?php
-	
+
 	/**
 	 * This Class handles all methods to display the recipe data
 	 */
@@ -24,6 +24,17 @@
 			}
 			return $output;
 		}
+		public static function listRecipes($titles)
+		{
+			asort($titles);
+			return implode("\n", $titles);
+		}
+		public static function listShopping($ingredient_list)
+		{
+			ksort($ingredient_list);
+			return implode("\n",array_keys($ingredient_list));
+		}
+
 		public static function displayRecipe($recipe)
 		{
 			$output = "";
@@ -39,5 +50,6 @@
 			$output .= $recipe->getYield(); 
 			return $output;
 		}
+
 	}
 ?>
