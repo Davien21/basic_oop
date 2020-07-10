@@ -77,5 +77,9 @@
 			}
 			return $taggedRecipes;
 		}
+		public function filterById($id)
+		{
+			return $this->recipes[$id];
+		}
 	}
 ?>

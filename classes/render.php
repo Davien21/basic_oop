@@ -27,7 +27,14 @@
 		public static function listRecipes($titles)
 		{
 			asort($titles);
-			return implode("\n", $titles);
+			$output = "";
+			foreach ($titles as $key => $title) {
+				$output .= "[$key] $title";
+				if ($output !== "") {
+					$output .= "\n";
+				}
+			}
+			return $output;
 		}
 		public static function listShopping($ingredient_list)
 		{
