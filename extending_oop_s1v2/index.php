@@ -16,6 +16,7 @@ require 'inc/header.php';
 
 foreach ($directory->listings as $listing) {
     include 'views/list_item.php';
+    var_dump($listing);
 }
 
 require 'inc/footer.php';
